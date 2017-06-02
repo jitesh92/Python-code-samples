@@ -1,4 +1,4 @@
-""" This file contains samples which wilol help practice python for beginners """
+""" This file contains samples exercises to help beginners code in Python """
 
 # Q1. What is 7 to the power of 4?
 #Code
@@ -27,9 +27,74 @@ print('The diameter of {one} is {two} kilometers'.format(one = planet, two = dia
 #Output: The diameter of Earth is 12742 kilometers. 
 
 """ Q4. Given this nested list, use indexing to grab the word "hello"
+  lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7] """
+
+#Code
+lst[3][1][2][0]
+
+# Output: "Hello"
+
+""" Q5. Given this nest dictionary grab the word "hello". Be prepared, this will be annoying/tricky
 d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}   """
 
 #Code
 d['k1'][3]['tricky'][3]['target'][3]
 
-#Output: "Hello"
+# Output: "Hello"
+
+
+""" Q6. Create a function that grabs the email website domain from a string in the form:
+user@domain.com
+So for example, passing "user@domain.com" would return: domain.com
+"""
+#Code:
+
+def domainGet(email):
+    return email.split('@')[-1]
+    
+domainGet('Jitesh_100@hotmail.com')
+
+#Output: 'hotmail.com'
+
+""" Q7. Create a basic function that returns True if the word 'dog' is contained in the input string. 
+Don't worry about edge cases like a punctuation being attached to the word dog, 
+but do account for capitalization.    """
+
+#Code:
+
+def findDog(st):
+    return 'dog' in st.lower().split()
+findDog('Is there a dog here?')
+
+#Output: True
+
+""" Q8. Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. """
+#Code:
+def countDog(var):
+    count=var.count('dog')
+	  print(count)
+    
+countDog('This dog runs faster than the other dog dude!')
+
+#Output: 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
